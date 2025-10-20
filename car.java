@@ -4,10 +4,10 @@ public class car{
     private String model;
     private int release_year;
     private String color;
-    private int price;
-    private int register_number;
+    private double price;
+    private String register_number;
 
-    public car(int id, String brand, String model, int release_year, String color, int price, int register_number){
+    public car(int id, String brand, String model, int release_year, String color, double price, String register_number){
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -28,10 +28,16 @@ public class car{
     public void setBrand(String brand) {
         this.brand = brand;
     }
-    public String getRelease_year() {
+    public String getModel() {
+        return model;
+    }
+    public void setModel(String model) {
+        this.model = model;
+    }
+    public int getRelease_year() {
         return release_year;
     }
-    public void setRelease_year(String release_year) {
+    public void setRelease_year(int release_year) {
         this.release_year = release_year;
     }
     public String getColor() {
@@ -40,10 +46,10 @@ public class car{
     public void setColor(String color) {
         this.color = color;
     }
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
     public String getRegister_number() {
