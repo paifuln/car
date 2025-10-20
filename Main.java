@@ -30,5 +30,30 @@ public class Main {
     for (car car : toyotas) {
         System.out.println(car.getModel() + " (" + car.getRelease_year() + ")");
     }
+    int currentYear = java.time.Year.now().getValue();
+    int years = 5; // пример
+    car[] olderToyotas = getCarByBrendAndYearOperational(cars, "Toyota", years);
+    System.out.println("Toyota, эксплуатируемых более " + years + " лет:");
+    for (car car : olderToyotas) {
+        System.out.println(car.getModel() + " (" + car.getRelease_year() + ")");
+    }
+}
+    public static car[] getCarByBrendAndYearOperational(car[] cars, String brand, int years) {
+    int currentYear = java.time.Year.now().getValue();
+    int count = 0;
+    for (car car : cars) {
+        if (car.getBrand().equalsIgnoreCase(brand) && (currentYear - car.getRelease_year()) > years) {
+            count++;
+        }
+    }
+    car[] result = new car[count];
+    int index = 0;
+    for (car car : cars) {
+        if (car.getBrand().equalsIgnoreCase(brand) && (currentYear - car.getRelease_year()) > years) {
+            result[index] = car;
+            index++;
+        }
+    }
+    return result;
 }
 }
