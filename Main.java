@@ -14,10 +14,10 @@ public class Main {
         cache.printContents();
 
         // Проверка методов
-        System.out.println("Exists 'banana'? " + cache.exists("banana"));
-        System.out.println("Exists 'apple'? " + cache.exists("apple"));
-        System.out.println("First элемент: " + cache.getFirst());
-        System.out.println("Last элемент: " + cache.getLast());
+        System.out.println("Существует ли 'banana'? " + cache.exists("banana"));
+        System.out.println("Существует ли 'apple'? " + cache.exists("apple"));
+        System.out.println("Первый элемент: " + cache.getFirst());
+        System.out.println("Последний элемент: " + cache.getLast());
         System.out.println("Элемент по индексу 1: " + cache.getItemByIndex(1));
 
         // Удаляем элемент
